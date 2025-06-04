@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="https://fontawesome.com/" />
+  <title>Login</title>
+  <style>
+    
+       *{
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+      
+      font-family: "Roboto",sans-serif; 
+       text-transform: capitalize; 
+       
+     }
+    :root{
+       --mainColor:#F3F3E042;
+       --mainPadding:;
+       --mainFont-size:;
+       --mainMarggin:;
+       
+     }
+     body{
+       height: 100vh;
+       display: flex;
+       flex-flow: column nowrap;
+       justify-content: center; 
+       background-color:#ECFBFA; 
+     }
+     .head {
+       width: 100%;
+       padding:30px;
+       display: flex;
+       justify-content: center; 
+  
+     } 
+     .head h1{
+       font-weight: 400; 
+       font-size: 1.6em; 
+     }
+     span {
+       font-weight: 500; 
+       color:#2C807F; 
+     }
+     h1 mark {
+  background-color:#86E7C8; 
+  color: #0E221C; 
+  
+     }
+     form{
+       width: 100%;
+       display: flex;
+       flex-flow: column nowrap; 
+       justify-content: center; 
+       align-items: center; 
+       padding: 10px 40px; 
+     }
+     form div{
+  margin: 20px; 
+  display: flex;
+  flex-flow: column nowrap; 
+  justify-content: center; 
+  align-items: center; 
+}
+form div input {
+  width: 300px;
+  padding: 10px 5px;
+  margin: 10px;
+  border-radius: 3px;
+  border: 1px solid gray; 
+}
+form div label {
+  width: 100%;
+  font-weight: 500;
+  color:#368282;
+}
+form div input[type="submit"]{
+  background-color:#186565;
+  color: white;
+  font-weight: 600; 
+}
+@media screen and (orientation: landscape) {
+  /* CSS rules for landscape orientation */
+  body {
+   height: auto; 
+   }
+
+
+  /* أضف المزيد من القواعد حسب الحاجة */
+}
+.one a{
+  padding: 10px; 
+  text-decoration-color:#9800286E; 
+  color:#2D3232; 
+  font-weight: 300; 
+}
+form div input[type="placeholder"]{
+  text-transform: lowercase; 
+}
+  </style>
+</head>
+<body>
+  <div class="head">
+    <h1><mark>Step Into Style </mark>— Create Your Account</h1>
+    
+  </div>
+  
+   <form action="index.html ">
+     <div>
+       <label>name</label>
+       <input type="text" placeholder="username" required>
+     </div>
+     <div>
+       <label>email</label>
+       <input type="email" placeholder="email address" required>
+     </div>
+     <div>
+       <label>password </label>
+       <input type="password" placeholder="password" required>
+     </div>
+       <div>
+       <label>confirm password </label>
+       <input type="password" placeholder=" rewrite password" required>
+     </div>
+    
+     <div>
+     <input type="submit" value="sign in">
+     </div>
+      
+   </form>
+</body>
+</html>
+ 

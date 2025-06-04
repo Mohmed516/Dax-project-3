@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <title>product-1</title>
+  <style>
+  *{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    text-transform:capitalize; 
+    scroll-behavior: smooth; 
+  }
+  body{
+    height: 100vh; 
+    display: grid;
+    grid-template-columns:(5,1fr); 
+    grid-template-rows: 50px 600px auto 200px auto 50px; 
+    grid-template-areas:"header header header header header" 
+    "main-section main-section main-section main-section main-section" 
+    "form form form form form"
+    "available available available available available"
+    "del del del del del"
+    "fot fot fot fot fot"
+    
+  }
+   header{
+     width:100%;
+     grid-area: header; 
+     background-color:#eee;
+     color:#166B63; 
+     display: flex;
+     padding: 10px 40px;
+     justify-content: space-between; 
+     align-items:center; 
+     position:fixed;
+     z-index:3000;
+    }
+  .logo h1{
+    font-weight:600;
+    font-size: 1.5em; 
+    letter-spacing: 1px; 
+    color: var(--secondColor);
+    }
+  .sp-logo{
+    font-size:1.2em; 
+    color:#041718; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .main-icon {
+    width: 40%; 
+    color:#287C7AB8;
+    font-size: ;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+.main-section {
+  grid-area: main-section ; 
+  width: 100%;
+  padding-top:100px; 
+
+}
+
+.contents{
+  width:100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; 
+  
+}
+.content-img{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-flow:column nowrap; 
+  align-items: center; 
+  justify-content: space-between; 
+}
+img{
+  width: 300px;
+  height: 300px; 
+}
+.quietly{
+  justify-content: flex-start;
+  color: gray;  
+  
+}
+.quietly h3{
+  font-weight: 300; 
+  font-size: 0.8em;
+  padding-left: 5px; 
+  border-left: 2px solid red; 
+}
+.star{
+  width: 100%; 
+  padding: 5px 40px; 
+  display: flex; 
+  align-items: flex-end; 
+  justify-content: space-between; 
+
+  
+}
+.star .reviews {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  flex-flow: row nowrap; 
+  font-size: 0.8em; 
+  font-weight: 400; 
+}
+.star i{
+  color: #FFD700;
+  font-size: 0.8em; 
+}
+.star span{
+  color:gray;
+  font-weight:600;
+
+}
+.quietly 
+{
+  width: 100%;
+  height: 20px; 
+  display: flex; 
+  padding: 10px 40px; 
+  align-items: center; 
+  justify-content: space-between; 
+}
+.details{
+  width: 90%;
+  height: 50px;
+  padding: 0px  20px;
+  background-color:; 
+  border-top:1px solid black; 
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; 
+  justify-content: space-between; 
+ 
+}
+.star h3{
+  font-weight: 700;
+  font-size: 0.7em; 
+}
+.details-icon{
+  width: 35%;
+  height:40px;
+  align-items: center; 
+  display:flex;
+  justify-content:flex-end;
+  color: #5D5F5F; 
+}
+.details-icon i{
+  font-size: 1em; 
+}
+.fa-share-nodes:hover {
+  color:deepskyblue;  
+}
+.fa-heart:hover{
+  color:#BB0F11; 
+}
+.price{
+  width: auto;
+  height: 40px;
+  padding: 5px; 
+ display: flex;
+ flex-flow: column nowrap; 
+ justify-content: center; 
+  border-top:; 
+  background-color:#BEF2F76E; 
+
+}
+.price p{
+  font-size:0.9em;
+  font-weight: 300; 
+}
+form{
+  grid-area: form; 
+  width: 100%;
+  padding: 0px 40px;
+  display: flex;
+  flex-flow: column nowrap; 
+  justify-content: center;
+  align-items: center; 
+}
+form h3{
+  font-weight: 400;
+  font-size: 0.9em; 
+  
+}
+
+form label{
+  width: 20px;
+  height:20px;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+ margin-bottom: 10px; 
+ padding: 10px; 
+ color: white; 
+ font-size:0.6em; 
+ border-radius: 50px; 
+}
+form input{
+  width: 10px;
+  height: 10px;
+}
+form .color  { 
+  width: 100%;
+  padding:30px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center; 
+  justify-content: space-between;
+}
+form .size {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+}
+.available{
+  grid-area: available;  
+  width: 100%;
+  padding: 0px 40px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  
+}
+.in-stor,
+.Shipping{
+  width: 30%;
+  padding: 10px; 
+  height: 50%;
+  display: flex;
+  flex-flow: column nowrap; 
+  justify-content: center;
+  align-items: center; 
+  background-color:;
+  text-align: center; 
+  border: 1px solid  #2C807F;
+  
+}
+.in-stor i,
+.Shipping i{
+  color: #24927D; 
+  font-size: 1.5em; 
+  padding-bottom: 10px; 
+}
+select{
+  width: 250px; 
+  padding: 5px;
+  border-radius: 5px; 
+  background-color: white; 
+  border: 1px solid  gray; 
+} 
+.link{
+  width: 100%;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+
+}
+.link a{
+  width: 100px; 
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  border-radius: 5px; 
+  text-align: center; 
+  background-color:#128F66; 
+  cursor: pointer; 
+}
+form i{
+  color: white; 
+}
+.delivered{
+  grid-area: del; 
+  width: 100%;
+display: flex;
+flex-flow: column nowrap; 
+align-items:flex-start; 
+justify-content: center; 
+  padding: 20px 40px; 
+  background-color: #E3ECED9E; 
+}
+.delivered h3{
+  font-weight: 500;
+  color: #12282B; 
+  width: 150px; 
+  border-bottom: 1px solid  black; 
+  
+}
+.one p{
+  font-weight: 300;
+  padding: 20px 10px;
+  line-height: 1.5em; 
+}
+fotter {
+  grid-area: fot;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color:#2C807F; 
+}
+fotter p{
+      font-size:1em; 
+      word-spacing: 1px;
+      color: #F9F9F9; 
+      padding-right: 20px; 
+      text-align: center; 
+    
+    }
+    fotter  i{
+      padding-left:5px;
+      color: #F9F9F9; 
+      
+    }
+  </style>
+  
+</head>
+
+<body>
+     <header>
+     <div class="logo">
+       <h1>da<span class="sp-logo">x</span></h1>
+       </div>
+       <div class="main-icon">
+         <a href="home.html" style="color:var(--secondColor);"><i class="fa-solid fa-store"></i></a>
+         <i class="fa-solid fa-cart-shopping"></i>
+         <i class="fa-solid fa-circle-user"></i>
+         
+   </header>
+ 
+    <section class="main-section">
+
+      <div class="contents">
+        
+        <div class="content-img">
+          <div class="quietly">
+            <h3>Best Rated </h3>
+                <i class="fa-solid fa-share-nodes" ></i>  
+          </div>
+          <img srcset="" src="IMG-20250518-WA0020-removebg-preview.png" alt="">
+        
+          <div class="star">
+                <h3> Luxury Velvet Slippers</h3>
+                <div class="reviews">
+           <i class="fas fa-star"></i>
+           <h5>4.5<span>(120 reviews)</span></h5>
+           </div>
+          </div>
+        </div>
+        <div class="details">
+       <div class="price"><p>us:$<span style="color:red;font-weight:bold;font-size:1em;">8.</span>05</p>
+       <p>
+ <del> <i class="fas fa-fire" style="color: grey;"></i> <strong >30% OFF</strong> – <span style="color:grey ; font-weight:500;" >Limited Offer!</span></del>
+</p>
+       </div>
+          <div class="details-icon">
+             <i class="fa-solid fa-heart"></i>      
+       
+          </div>
+          
+        </div>
+
+      </section>
+    
+    
+       <form>
+         <div class="color">
+         <h3>colors:</h3>
+          
+            <label style="background-color:grey"> 
+            <input type="checkbox" style="accent-color:gray;"> 
+            </label>/
+                  <label style="background-color:black"> 
+            <input type="checkbox" style="accent-color:black;"> 
+            </label>/
+                  <label style="background-color:brown"> 
+            <input type="checkbox" style="accent-color:brown;" disabled>  
+            </label>/
+                 <label style="background-color:deepskyblue;"> 
+            <input type="checkbox" style="accent-color:deepskyblue;"> 
+            </label>
+            <span style="color:red;font-size:0.6em; display:inline-block;">*Some colors may not be available right now"</span>
+            </div>
+            <div class="size">
+          <h3> your size</h3>
+      <select id="size" name="size">
+        <option value=""></option>
+        <option value="s">23</option>
+        <option value="m">42</option>
+        <option value="l">32</option>
+         <option value="xl">40</option>
+      </select> 
+      </div>
+      <div class="link">
+              <a href="#" style="background-color:black;width:200px;">add to cart       <i class="fa-solid fa-cart-shopping" style="font-size:0.8em;"></i></a>
+        
+        <a href="/Dax-project/by.html">buy new</a>
+        </div>
+       </form>
+       <section class="available">
+         <div class="in-stor"><i class="fa-solid fa-store"></i>
+        <h5> In Store</h5></div>
+         <div class="Shipping"><i class="fa-solid fa-truck"></i>
+     <h5>Shipping Available</h5>
+         </div>
+       </section>
+   <section class="delivered">
+     <div class="one">
+       <h3>about shoes </h3>
+       <p>The Nike Air Force 1 in black and white offers a timeless look with modern comfort. Designed for everyday wear, it combines classic style with durable materials for long-lasting performance.
+</p>
+     </div>
+     <div class="one">
+       <h3>features</h3>
+       <p><strong> Material</strong>: Premium synthetic leather<br>
+
+<strong>Color</strong>: Classic black & white<br>
+
+<strong> Lining</strong>: Soft inner padding for all-day comfort<br>
+
+  <strong>Outsole</strong>: Non-slip rubber sole<br>
+
+<strong>Cushioning</strong>: Air unit in the heel for shock absorption<br>
+
+<strong>Closure</strong>: Traditional lace-up design<br>
+
+<strong>Ventilation</strong>: Perforated toe box for breathability</p>
+     </div>
+   </section>
+        <fotter>
+           <p>
+       &copy dax513
+      </p>
+         <div class="fotter-icons">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+    </div>
+    </fotter>
+    
+</body>
+
+</html>

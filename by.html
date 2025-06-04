@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>by-page</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      text-transform:capitalize; 
+      font-family: "Roboto" ,sans-serif ;
+    }
+  body{
+    background-color:; 
+    height: 50vh; 
+  }
+   header{
+     width:100%;
+     grid-area: header; 
+     background-color:#eee;
+     color:#166B63; 
+     display: flex;
+     padding: 10px 40px;
+     justify-content: space-between; 
+     align-items:center; 
+     position:fixed;
+     z-index:3000;
+    }
+  .logo h1{
+    font-weight:600;
+    font-size: 1.5em; 
+    letter-spacing: 1px; 
+    color: var(--secondColor);
+    }
+  .sp-logo{
+    font-size:1.2em; 
+    color:#041718; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .main-icon {
+    width: 40%; 
+    color:#287C7AB8;
+    font-size: ;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+section {
+  width: 100%;
+  padding:100px 40px;
+}
+section h3{
+  font-weight: 400;
+  width: 120px; 
+  font-size: 1.5em; 
+  border-bottom: 1px solid gray;  
+}
+section p{
+  padding: 10px;
+  color:white; 
+  margin: 10px; 
+  font-weight: 350; 
+  border-left: 2px solid  black; 
+  background-color: #BD1218;
+}
+form{
+  width: 100%;
+  padding: 50px 0px;
+}
+form h4{
+  width: 200px; 
+  font-weight: 400;
+  margin-bottom: 20px; 
+  color: grey; 
+}
+form div{
+  margin: 20px; 
+  display: flex;
+  flex-flow: column nowrap; 
+}
+form div input {
+  width: 280px;
+  padding: 10px 5px;
+  margin: 10px;
+  border-radius: 3px;
+  border: 1px solid gray; 
+}
+form div label {
+  width: 100%;
+  font-weight: 500;
+  color:#368282;
+}
+form div select {
+  width: 200px;
+  margin: 10px;
+  padding: 5px; 
+}
+form div textarea{
+  padding: 5px; 
+  margin: 10px; 
+}
+form div input[type="submit"]{
+  width: 150px;
+  background-color:#368282;
+  color: white;
+  font-weight: 600; 
+}
+
+.attention{
+  width: 100%;
+  height: 600px; 
+  background-color:#D0F9F9;
+padding: 20px 50px; 
+}
+.attention h4{
+  font-weight: 500;
+  color: #112525;
+  width: 100%;
+  margin-bottom: 10px; 
+  padding: 20px 0px; 
+}
+.attention ul{
+  font-weight: 300;
+  line-height: 1.6em;
+  padding: 20px; 
+}
+fotter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color:#2C807F; 
+  color: white; 
+  height: 50px;
+}
+fotter p{
+  padding-right: 15px; 
+}
+fotter  i{
+  color: white;
+
+}
+
+
+  </style>
+</head>
+
+<body>
+      <header>
+     <div class="logo">
+       <h1>da<span class="sp-logo">x</span></h1>
+       
+       </div>
+       <div class="main-icon">
+         <a href="index.html" style="color:var(--secondColor);"><i class="fa-solid fa-store"></i></a>
+         <i class="fa-solid fa-cart-shopping"></i>
+         <i class="fa-solid fa-circle-user"></i>
+         
+   </header>
+   <section class="confirm">
+     <div class="head">
+       <h3>Checkout</h3>
+       <p>Please fill out the form below to complete your purchase.</p>
+     </div>
+     <form>
+       <div class="personal">
+         <h4>personal information: </h4>
+         <div>
+         <label for="name">name</label>
+         <input type="text" placeholder="full-name" required>
+         </div>
+         <div>
+           <label for="email">email</label>
+           <input type="email" placeholder="email address" required>
+         </div>
+         <div>
+           <label>phone number</label>
+           <input type="tel" placeholder="+96×××××××××">
+         </div>
+         <div>
+           <label style="color:red;">dax email</label>
+           <span style="color:grey;
+           font-size:0.8em;">all information will  send  to  Dax </span>
+           <input type="email" placeholder="dax513@gmail.com" readonly>
+         </div>
+       
+       <div class="delivery">
+          <label for="country">Select Country:</label>
+<select name="country" id="country" required>
+  <option value="">-- Select Country --</option>
+  <option value="saudi">Saudi Arabia</option>
+  <option value="uae">United Arab Emirates</option>
+  <option value="egypt">Egypt</option>
+  <option value="jordan">Jordan</option>
+  <option value="morocco">Morocco</option>
+  <option value="iraq">Iraq</option>
+  <option value="kuwait">Kuwait</option>
+  <option value="qatar">Qatar</option>
+  <option value="oman">Oman</option>
+  <option value="sudan">Sudan</option>
+</select>
+  </div>
+  <div> 
+  <label for="full-address">Full Address</label>
+<textarea id="full-address" name="full-address" rows="4" required placeholder="> 123 Elm Street, Apt 4B, Springfield, IL 62704, USA"></textarea>
+  </div>
+
+   <div style="width: 100%;display: flex;flex-flow: row nowrap; justify-content: space-between">
+    <input type="submit" value="cancel"
+    style="background-color:brown">
+    <input type="submit" value="place order">
+  </div>
+</form>
+   </section>
+     <div class="attention">
+       <h4>Important Shipping Information</h4>
+<ul>
+  <li>Orders are processed within <strong>1–2 business days</strong>.</li>
+  <li>Standard delivery takes <strong>3–7 business days</strong>, depending on your location.</li>
+  <li>You will receive a confirmation email with tracking details once your order ships.</li>
+  <li>Ensure your <strong>shipping address is accurate</strong> to avoid delays.</li>
+  <li>We do not ship to P.O. Boxes or military addresses at this time.</li>
+  <li><strong>Express and international shipping</strong> options are available during checkout.</li>
+</ul>
+     </div>
+   
+    <fotter>
+           <p>
+       &copy dax513
+      </p>
+         <div class="fotter-icons">
+      <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a> 
+    </div>
+    </fotter>
+    
+   
+</body>
+
+</html>
